@@ -2,8 +2,15 @@
     <div class="item-container">
         <div class="col-md-4">
             <h4>{{menu.name}}</h4>
-            <p>{{menu.rating}}</p>
+            <p>Rating: {{menu.rating}}<span ng-if="menu.rating > 4.0"> - High Rating !</span></p>
             <p>{{menu.img}}</p>
+            <p>
+                <textarea ng-model="menu.newReview" name="menu.review" rows="3" cols="40"></textarea>
+            </p>
+            <p>
+                {{menu.newRewview}}
+                <span ng-if="!menu.newReview"> Why not write a review!</span>
+            </p>
         </div>
     </div>
 </div>
