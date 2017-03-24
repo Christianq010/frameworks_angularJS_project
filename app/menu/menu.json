@@ -2,21 +2,21 @@
   {
     "id": "strawberry-pudding",
     "name": "Strawberry-Pudding",
-    "img": "yeoman.png",
+    "img": "strawberry-pudding.jpeg",
     "calories": 430,
     "rating": 4.2
   },
   {
     "id": "choc-pudding",
     "name": "Chocolate-Pudding",
-    "img": "strawberry-pudding.jpg",
+    "img": "choc-pudding.jpg",
     "calories": 200,
     "rating": 3
   },
   {
     "id": "choc-cake",
     "name": "Chocolate-Cake",
-    "img": "strawberry-pudding.jpg",
+    "img": "choc-cake.jpg",
     "calories": 500,
     "rating": 1.2
   }

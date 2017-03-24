@@ -11,8 +11,8 @@ angular.module('udaciMealsApp')
   .controller('MenuCtrl', ['foodFinder', function(menu) {
       var vm = this;
 
-      menu.getMenu().then(function(data) {
-          vm.items = data;
+      menu.getMenu().then(function(response) {
+          vm.items = response.data;
       });
 
       this.increment = function(item) {
