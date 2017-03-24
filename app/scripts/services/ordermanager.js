@@ -9,7 +9,7 @@
  */
 angular.module('udaciMealsApp')
   .service('orderManager', function () {
-    var selectedDay = 'Monday';
+    var selectedDay = '';
 
     var orderSelection = {
         Monday: {
@@ -37,6 +37,26 @@ angular.module('udaciMealsApp')
             lunch: '',
             dinner: ''
         }
+    };
+
+    this.getActiveDay = function () {
+        return selectedDay;
+    };
+
+    this.setActiveDay = function (day) {
+        selectedDay = day;
+    };
+
+    this.chooseOptionMenu = function (meal, menuItem) {
+        orderSelection[selectedDay][meal] = menuItem;
+    };
+
+    this.removeMenuOption = function (day, menuCategory) {
+        orderSelection[day][menuCategory] = '';
+    };
+
+    this.getOrders = function () {
+        return orderSelection;
     };
 
   });

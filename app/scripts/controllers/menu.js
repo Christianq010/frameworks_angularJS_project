@@ -17,6 +17,10 @@ angular.module('udaciMealsApp')
           });
       });
 
+      this.chooseItem = function(menuCategory, menuItemName) {
+          orderManager.chooseOptionMenu(menuCategory, menuItemName);
+      };
+
       this.increment = function(item) {
           item.rating = ((item.rating * 10) + 1) / 10;
       };
