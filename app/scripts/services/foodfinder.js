@@ -8,8 +8,15 @@
  * Service in the udaciMealsApp.
  */
 angular.module('udaciMealsApp')
-  .service('foodFinder', function () {
+  .service('foodFinder', ['$http', function($http) {
         this.getMenu = function () {
-          return $.get('/menu/menu.json');
+            return $http({ method: 'GET', url: '/menu/menu.json' });
         };
-  });
+  
+        this.getItem = function(id) {
+            // var menuItemFile = '/menu/' + id + '.json';
+            // return $.get(menuItemFile);
+            return $http({ method: 'GET', url: '/menu/' + id + '.json' });
+        };
+        
+  }]);
